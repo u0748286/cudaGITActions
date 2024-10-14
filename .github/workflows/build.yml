@@ -25,6 +25,6 @@ jobs:
 
       - name: Build with CMake
         run: |
-          cd cudaGITActions/src
+          cd /home/runner/work/cudaGITActions/cudaGITActions/src
           cmake ..
           make
