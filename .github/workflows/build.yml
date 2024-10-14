@@ -25,6 +25,6 @@ jobs:
 
       - name: Build with CMake
         run: |
-          cd ../src
+          cd cudaGITActions/src
           cmake ..
           make
