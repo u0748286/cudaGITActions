@@ -16,7 +16,7 @@ pkg_check_modules(GLFW REQUIRED glfw3)
 include_directories(${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} ${GLFW_INCLUDE_DIR})
 
 # 指定 CUDA 标准版本
-set(CMAKE_CUDA_STANDARD 11)
+set(CMAKE_CUDA_STANDARD 12)
 
 # 指定源文件
 set(SOURCE_FILES "${CMAKE_SOURCE_DIR}/src/kernel.cu")
