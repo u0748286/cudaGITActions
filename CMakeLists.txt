@@ -26,7 +26,8 @@ add_executable(CudaOpenGLActions ${SOURCE_FILES})
 
 # 指定链接库
 target_link_libraries(CudaOpenGLActions glfw GLEW ${OPENGL_LIBRARIES})
-
+# 显式指定 CUDA 为链接语言
+set_target_properties(CudaOpenGLActions PROPERTIES LINKER_LANGUAGE CUDA)
 # 启用 CUDA 可分离编译
 set_target_properties(CudaOpenGLActions PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
