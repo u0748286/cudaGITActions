@@ -19,7 +19,7 @@ include_directories(${OPENGL_INCLUDE_DIR} ${GLEW_INCLUDE_DIR} ${GLFW_INCLUDE_DIR
 set(CMAKE_CUDA_STANDARD 11)
 
 # 指定源文件
-set(SOURCE_FILES kernel.cu)
+set(SOURCE_FILES "${SOURCE_DIR}/kernel.cu")
 
 # 添加可执行文件
 add_executable(CudaOpenGLActions ${SOURCE_FILES})
