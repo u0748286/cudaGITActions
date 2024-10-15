@@ -5,7 +5,7 @@ project(CudaOpenGLActions)
 set(CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu/cmake/glfw3")  # 设置 GLFW 的路径
 
 # 查找依赖库
-find_package(CUDA REQUIRED)
+find_package(CUDA REQUIRED COMPONENTS cublas cudart)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 # 使用 pkg-config 来查找 GLFW
