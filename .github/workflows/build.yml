@@ -23,8 +23,14 @@ jobs:
           sudo apt-get install -y libglew-dev libglfw3-dev mesa-common-dev build-essential
 
 
-      - name: Build with CMake
+      - name: Set GLFW_DIR environment variable
         run: |
-          cd /home/runner/work/cudaGITActions/cudaGITActions/src
-          cmake ..
+          export GLFW_DIR=/usr/lib/cmake/glfw  # 确认这个路径是否正确
+          mkdir -p build
+          cd build
+          cmake .. -DCMAKE_PREFIX_PATH="$GLFW_DIR"
+
+      - name: Build the project
+        run: |
+          cd build
           make
