@@ -29,9 +29,10 @@ jobs:
           cd glfw
           mkdir build
           cd build
-          cmake .. -DGLFW_USE_WAYLAND=OFF
+          cmake .. -DGLFW_BUILD_WAYLAND=OFF -DGLFW_BUILD_X11=ON
           make
           sudo make install
+
 
   
       - name: Configure and build with CMake
