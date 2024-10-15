@@ -45,5 +45,6 @@ jobs:
       - name: Configure CMake
         run: |
           cd build
-          cmake .. -DGLFW_DIR=/usr/lib/x86_64-linux-gnu/cmake/glfw   
+          cmake .. -DGLFW_DIR=/usr/lib/x86_64-linux-gnu/cmake/glfw3
+
         
