@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(CudaOpenGLActions)
+set(CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu/cmake/glfw3/")
 
 # 查找 CUDA
 find_package(CUDA REQUIRED)
