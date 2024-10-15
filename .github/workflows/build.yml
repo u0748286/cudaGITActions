@@ -20,7 +20,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libglew-dev mesa-common-dev build-essential cmake
+          sudo apt-get install -y libglew-dev libglfw3-dev mesa-common-dev build-essential libxrandr-dev
+
   
     
       - name: Build GLFW from source
