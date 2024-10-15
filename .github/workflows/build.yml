@@ -35,10 +35,15 @@ jobs:
 
 
   
-      - name: Configure and build with CMake
+      - name: Find GLFW installation
         run: |
-          mkdir build
+          dpkg -L libglfw3-dev
+  
+      - name: Create build directory
+        run: mkdir build
+  
+      - name: Configure CMake
+        run: |
           cd build
-          cmake ..
-          make     
-      
+          cmake .. -DGLFW_DIR=/usr/lib/x86_64-linux-gnu/cmake/glfw   
+        
