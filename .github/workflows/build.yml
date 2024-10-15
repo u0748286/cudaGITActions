@@ -21,18 +21,18 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libglew-dev libglfw3-dev mesa-common-dev build-essential
-  
-      - name: List GLFW files
+      - name: Find GLFW config files
         run: |
-          dpkg -L libglfw3-dev
-  
+            sudo find / -name "*glfw-config.cmake" -o -name "*GLFWConfig.cmake"  
+    
       - name: Set GLFW_DIR
         run: |
-          export GLFW_DIR=/usr/lib/cmake/glfw  # 根据上一步找到的路径更新此变量
-  
+                export GLFW_DIR=/usr/lib/x86_64-linux-gnu/cmake/glfw3  # 根据上一步找到的路径更新      
+    
       - name: Configure and build with CMake
         run: |
-          mkdir build
-          cd build
-          cmake ..
-          make
+            mkdir build
+            cd build
+            cmake ..
+            make          
+      
