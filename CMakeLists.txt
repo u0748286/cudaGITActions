@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(CudaOpenGLActions)
-set(CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu/cmake/glfw3/")
 
-# 查找 CUDA
+# 查找 GLFW
+set(CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu/cmake/glfw3")  # 设置 GLFW 的路径
 find_package(CUDA REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
@@ -24,3 +24,5 @@ target_link_libraries(CudaOpenGLActions glfw GLEW ${OPENGL_LIBRARIES})
 set_target_properties(CudaOpenGLActions PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )
+
+
